@@ -19,3 +19,20 @@ npm run offline
 ```
 
 Once this is running, it's available at [http://localhost:4000](http://localhost:4000).
+
+## Github actions
+
+This template also contains github actions to execute the deployment via Github actions, but you will need to uncomment these lines in the `.github/workflows/main.yml` file:
+
+```yaml
+  # ...
+  - run: npm ci
+  - name: serverless deploy
+    uses: serverless/github-action@master
+    with:
+      args: deploy
+    env:
+      TEST: ${{ secrets.TEST }}
+```
+
+> If you don't have github actions support, simply remove the `.github` folder.
