@@ -42,6 +42,8 @@ provider:
 functions:
   testFunction:
     handler: handler.testFunction
+    environment:
+      TEST: ${env:TEST, ''}
     events:
       - http:
           path: test
