@@ -28,7 +28,7 @@ This template also contains github actions to execute the deployment via Github 
   # ...
   - run: npm ci
   - name: serverless deploy
-    uses: serverless/github-action@master
+    uses: serverless/github-action@v3.1
     with:
       args: deploy
     env:
