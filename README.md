@@ -22,7 +22,7 @@ Once this is running, it's available at [http://localhost:4000](http://localhost
 
 ## Github actions
 
-This template also contains github actions to execute the deployment via Github actions, but you will need to uncomment these lines in the `.github/workflows/main.yml` file:
+This template also contains github actions to execute the deployment via Github actions, but you will need to uncomment these lines in the `.github/workflows/release.yml` file:
 
 ```yaml
   # ...
@@ -34,5 +34,7 @@ This template also contains github actions to execute the deployment via Github 
     env:
       TEST: ${{ secrets.TEST }}
 ```
+
+Then to start the deployment you just need to create a new Release in your repository.
 
 > If you don't have github actions support, simply remove the `.github` folder.
